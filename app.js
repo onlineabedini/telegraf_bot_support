@@ -1,6 +1,6 @@
 // require bot
 const { Telegraf } = require('telegraf');
-const token = '6371751048:AAEvpWUQKetH4F_LSbdpeJt5mcWGGms6GQs'
+const token = ''
 const bot = new Telegraf(token);
 
 // session
