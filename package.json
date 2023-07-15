@@ -1,0 +1,30 @@
+{
+  "name": "telegraf_bot_support",
+  "version": "1.0.0",
+  "description": "this is a sample of nodejs telegraf bot for supporting customers",
+  "main": "index.js",
+  "scripts": {
+    "dev":"nodemon app.js --ignore local_data_db.json",
+    "normal": "node app.js",
+    "server":"pm2 start 'node app.js'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onlineabedini/telegraf_bot_support.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/onlineabedini/telegraf_bot_support/issues"
+  },
+  "homepage": "https://github.com/onlineabedini/telegraf_bot_support#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "nodemon": "^3.0.1",
+    "telegraf": "^4.12.2",
+    "telegraf-session-local": "^2.1.1",
+    "telegram-keyboard": "^2.3.2"
+  }
+}
