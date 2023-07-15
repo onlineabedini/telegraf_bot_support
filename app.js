@@ -7,7 +7,7 @@ const bot = new Telegraf(token);
 const LocalSession = require('telegraf-session-local');
 
 // middleware
-const answerQuestion = require('./middlewares/index');
+const answerQuestion = require('./AI/index');
 bot.use((new LocalSession({ database: 'local_data_db.json' })).middleware());
 
 // replyes
@@ -34,9 +34,9 @@ new class telegram_application {
 
     // middle method
     middle() {
-        bot.use((ctx, next) => {
-            if(ctx.session.state === 'AI_asking'){
-                answerQuestion.answerQuestion(ctx, next);
+        bot.use(async (ctx, next) => {
+            if(ctx.session.state === 'AI_asking' && ctx.message.text !== 'بازگشت'){
+                await answerQuestion.answerQuestion(ctx, next);
             } else {
                 next();
             }
