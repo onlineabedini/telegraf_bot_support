@@ -1,2 +1,13 @@
 # telegraf_bot_support
-this is a sample of nodejs telegraf bot for supporting customers
+basic telegram bot for supporting customers
+
+-> main branch => English version
+-> Fa branch => Persian version
+
+## usage
+```
+npm install
+```
+```
+npm run dev
+```
